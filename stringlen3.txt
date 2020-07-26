@@ -1,0 +1,23 @@
+/*package whatever //do not write package name here */
+
+import java.io.*;
+import java.util.*;
+public class hello {
+    public static void main (String[] args) {
+        Scanner sc=new Scanner(System.in);
+        ArrayList<String> lst=new ArrayList<>();
+        int c=0;
+        while(sc.hasNext())
+        {
+            lst.add(sc.next());
+        }
+        String REGEX = "a[a-zA-Z0-9][a-zA-Z0-9]";
+        for(int i=0;i<lst.size();i++)
+        {
+
+            if(lst.get(i).matches(REGEX))
+                System.out.println(lst.get(i));
+        }
+
+    }
+}
